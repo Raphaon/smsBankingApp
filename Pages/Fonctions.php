@@ -54,7 +54,7 @@ function getCustomer($racine, $bdd)
 
 function getCustomerByNumCompte($numCompte, $con)
 {
-	$req = $con->query("SELECT * from COMPTE_CLIENT_CORRECT where NUM_COMPTE ='".$numCompte."'");
+	$req = $con->query("SELECT * from ALL_COMPTE_CLIENT where NUM_COMPTE ='".$numCompte."'");
 	if($req != null)
 	{
 		$custom = new Client();
